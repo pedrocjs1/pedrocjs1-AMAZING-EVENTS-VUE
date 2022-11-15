@@ -38,12 +38,19 @@
         </div>
     </nav>
       <main class="d-flex flex-column w-100 justify-content-center align-items-center main-details color-title">
-        <div class="d-flex flex-row card-details gap-5">
+        <div id="app" class="d-flex flex-row card-details gap-5">
             <div id="image-details" class="image-details">
-
+              <div class="d-flex w-100 h-100" >
+                <img class="" :src="eventId.image" alt="this an image of ${events.name}"/>      
+            </div>
             </div>
             <div id="container-details" class="container-details p-4 d-flex flex-column align-items-center justify-content-center gap-5 fs-5 ">
-              
+              <h1>{{eventId.name}}</h1>
+              <p>{{eventId.category}}</p>
+              <p>{{eventId.description}}</p>
+              <p>Place: {{eventId.place}}</p>
+              <p>Capacity: {{eventId.capacity}}</p>
+              <p>Price: ${{eventId.price}}</p>
             </div>
         </div>
       </main>
@@ -71,8 +78,9 @@
     </footer>
 
     <!-- <script src="./Assets/javascript/data.js"></script> -->
-    <script src="./Assets/javascript/details.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/21ebc2274f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./Assets/javascript/vue.js"></script>
 </body>
 </html>
