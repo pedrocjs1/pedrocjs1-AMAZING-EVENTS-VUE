@@ -78,17 +78,12 @@
     </header>
     <main id="app" class="d-flex flex-column gap-5 color-title">
       <div
-        class="section-nav d-flex flex-column flex-md-row justify-content-center align-items-center justify-content-md-around"
+        class="section-nav d-flex flex-column flex-lg-row flex-md-column justify-content-center align-items-center justify-content-md-around"
       >
-        <div class="d-lg-none">
-          <select id="index-category-select" v-model="checkedSelect">
-            <option selected>Select Category</option>
-            <option v-for="category in categories"  :value="category">{{category}}</option>      
-          </select>
-        </div>
+        
         <template v-for="category in categories">
-          <div class="padding-left form-check d-none d-lg-flex d-flex">
-            <input class="form-check-input" type="checkbox" :value="category" v-model="checked" >
+          <div class="padding-left form-check  d-lg-flex d-flex">
+            <input class="form-check-input" :id="category" type="checkbox" :value="category" v-model="checked" >
             <label class="form-check-label" :for="category">
                 {{category}}
             </label>
@@ -109,6 +104,8 @@
                 <i
                   class="fa-solid fa-magnifying-glass d-flex align-items-center"
                 ></i>
+                {{filter}}
+                {{filterSelect}}
               </div>
             </div>
           </nav>
