@@ -30,10 +30,13 @@ const app = createApp({
                 this.dateNow = data.currentDate
                 this.eventsComing = this.events.filter(event => this.dateNow < event.date)
                 this.eventsPast = this.events.filter(event => this.dateNow > event.date)
+
+
+                
                 this.eventsFilterComing = this.events.filter(event => this.dateNow < event.date)
                 this.eventsFilterPast = this.events.filter(event => this.dateNow > event.date)
                 this.eventId = this.events.find(item => item._id == this.id)
-                console.log(this.eventsFilter)
+                
                 this.getCategory()
             })
             .catch(err => console.log(err))
